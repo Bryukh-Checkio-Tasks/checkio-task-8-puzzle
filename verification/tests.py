@@ -6,8 +6,9 @@ Each test is dict with
     "answer" -- your right answer
     "explanation" -- not necessary key, it's using for additional info in animation.
 """
+from functools import reduce
 import random
-from builtins import reduce
+
 
 
 TESTS = {

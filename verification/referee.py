@@ -20,8 +20,7 @@ def check_route(puzzle, route):
         return False, ("", "Checkio return {0} instead string".format(route))
     work_puzzle = deepcopy(puzzle)
     checked_route = ''
-    goal = GOAL[3]
-    print(goal)
+    goal = GOAL
     x = y = -1
     for i in range(len(work_puzzle)):
         if 0 in work_puzzle[i]:
