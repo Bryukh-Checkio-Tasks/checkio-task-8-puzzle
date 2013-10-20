@@ -6,31 +6,77 @@ Each test is dict with
     "answer" -- your right answer
     "explanation" -- not necessary key, it's using for additional info in animation.
 """
+import random
+from builtins import reduce
 
 
 TESTS = {
     "Basics": [
         {
-            "input": [3, 2],
-            "answer": 5,
-            "explanation": "3+2=?"
+            "input": [
+                [1, 2, 3],
+                [4, 6, 8],
+                [7, 5, 0]
+            ],
+            "answer": [
+                [1, 2, 3],
+                [4, 6, 8],
+                [7, 5, 0]
+            ]
         },
+
         {
-            "input": [5, 7],
-            "answer": 12,
-            "explanation": "5+7=?"
+            "input": [
+                [7, 3, 5],
+                [4, 8, 6],
+                [1, 2, 0]
+            ],
+            "answer": [
+                [7, 3, 5],
+                [4, 8, 6],
+                [1, 2, 0]
+            ]
         }
+
     ],
-    "Extra": [
+    "Randoms": [
         {
-            "input": [6, 3],
-            "answer": 9,
-            "explanation": "6+3=?"
+            "input": None
         },
+
         {
-            "input": [6, 7],
-            "answer": 13,
-            "explanation": "6+7=?"
+            "input": None
         }
+
     ]
 }
+
+
+def generate_rand_puzzle(N):
+    """generate matrix NxN with numbers from 0 to N**2"""
+    shuffled_list = list(range(1, N ** 2))
+    random.shuffle(shuffled_list)
+    res_matrix = [[0] * N for _ in range(N)]
+    for i, v in enumerate(shuffled_list):
+        res_matrix[i // N][i % N] = v
+    return res_matrix
+
+
+def check_solvable(puzzle):
+    """Check solvable the puzzle or not"""
+    linear = reduce(lambda x, y: x + y, puzzle)
+    inversions = 0
+    for i, v in enumerate(linear):
+        inversions += sum([1 for k in linear[i:] if v > k and k])
+    return inversions % 2 == 0
+
+
+def generate_good_puzzle(N):
+    """Generate random solvable puzzle"""
+    while True:
+        puzzle = generate_rand_puzzle(N)
+        if check_solvable(puzzle):
+            return puzzle
+
+for t in TESTS["Randoms"]:
+    t["input"] = t["answer"] = generate_good_puzzle(3)
