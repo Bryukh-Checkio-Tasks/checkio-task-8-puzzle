@@ -1,0 +1,65 @@
+<p>
+    <img class="for_info_only" style="float: left" title="8-puzzle-pic"
+         src="/media/files/stephenwithenter.png" alt="8-puzzle-pic"
+         width="180px"/>
+    Восемьнашки (от слова <a href="https://ru.wikipedia.org/wiki/%D0%9F%D1%8F%D1%82%D0%BD%D0%B0%D1%88%D0%BA%D0%B8">Пятнашки</a>) -
+    Представляет собой набор одинаковых квадратных костяшек с нанесёнными числами,
+    заключённых в квадратную коробку.
+    Длина стороны коробки в три раза больше длины стороны костяшек
+    для набора из 8 элементов, соответственно в коробке остаётся незаполненным одно квадратное поле.
+    Цель игры — перемещая костяшки по коробке, добиться упорядочивания их по номерам,
+    желательно сделав как можно меньше перемещений.
+</p>
+
+<p>
+    Головоломка представлена, как матрица 3 на 3 с цифрами от 1 до 8.
+    0 - это пустое поле. Вы можете "двигать" пустое поле в четырех направлениях:
+    вверх--"U", вниз--"D", влево--"L", и вправо--"R".
+    Вам нужно найти последовательность ходов, чтобы решить головоломку.
+    Решение должно быть представлено, как строка букв ("UDLR") описывающих действия.
+</p>
+
+<p class="for_info_only" style="text-align: center"><img title="8-puzzle"
+                                                         src="{{ MEDIA }}8-puzzle.png"
+                                                         alt="8-puzzle" width="550px"/></p>
+<p class="for_editor_only" style="text-align: center"><img title="8-puzzle"
+                                                           src="{{ MEDIA }}8-puzzle.png"
+                                                           alt="8-puzzle" width="380px"/></p>
+
+<p>
+    <strong>Входные данные: </strong>
+    Матриц с цифрами от 1 до 8, как список (list) списков с целыми числами.
+</p>
+
+<p>
+    <strong>Выходные данные: </strong>
+    Последовательность действий, как строка.
+</p>
+
+<div class="for_info_only">
+    <p>
+        <strong>Пример:</strong>
+    </p>
+<pre class="brush: python">checkio([[1, 2, 3],
+         [4, 6, 8],
+         [7, 5, 0]]) == "ULDR"</pre>
+</div>
+
+
+<p class="for_info_only">
+    <strong>Как это используется: </strong>
+    Самое очевидное использование - это создание бота для решения подобных головоломок.
+    Однако это также моделирование с эвристикой (если вы используете ее конечно).
+</p>
+
+<p>
+    <strong>Предусловия:</strong><br>
+    len(puzzle) == 3<br>
+    all(len(row) == 3 for row in puzzle)
+</p>
+
+<p class="for_info_only">
+    <strong>Как использовать TryIt: </strong><br>
+    <iframe width="560" height="315" src="//www.youtube.com/embed/u-7dtPVrApU" frameborder="0" allowfullscreen></iframe>
+</p>
+
