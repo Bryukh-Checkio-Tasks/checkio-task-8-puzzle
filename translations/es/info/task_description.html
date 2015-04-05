@@ -1,0 +1,29 @@
+<p><img alt="8-puzzle-pic" class="for_info_only" src="/media/files/stephenwithenter.png" style="float: left" title="8-puzzle-pic" width="180px" /> &ldquo;Rompecabezas 8&rdquo; (o &ldquo;Juego del 8&rdquo;) es un rompecabezas formado por un grupo de piezas numeradas y ordenadas de forma aleatoria, que se deslizan sobre un marco con un espacio vac&iacute;o. El objeto del rompecabezas es colocar las fichas en el orden correcto (ver imagen) deslizando cualquier pieza adyacente al espacio disponible. <a href="/mission/outside/?url=http%3A//en.wikipedia.org/wiki/8_puzzle&amp;back_url=/mission/task/info/8-puzzle/"> Puedes leer m&aacute;s sobre este tipo de rompecabezas en Wikipedia.</a></p>
+
+<p>Nuestro rompecabezas se presenta como una matriz de 3x3 con n&uacute;meros del 1 al 8. Cero es la celda vac&iacute;a. Es posible &quot;moverse&quot; hacia la celda vac&iacute;a en cuatro direcciones: arriba - &quot;U&quot;, abajo - &quot;D&quot;, a la izquierda - &quot;L&quot;, y a la derecha - &quot;R&quot;. El objetivo es necesita encontrar una secuencia de movimientos para resolver el rompecabezas. La soluci&oacute;n se presenta como cadena de s&iacute;mbolos (&quot;DUDL&quot;) que describen los movimientos escogidos.</p>
+
+<p class="for_info_only" style="text-align: center"><img alt="8-puzzle" src="{{ MEDIA }}8-puzzle.png" title="8-puzzle" width="550px" /></p>
+
+<p class="for_editor_only" style="text-align: center"><img alt="8-puzzle" src="{{ MEDIA }}8-puzzle.png" title="8-puzzle" width="380px" /></p>
+
+<p><strong>Datos de Entrada: </strong>una matriz con n&uacute;meros del 1 al 8 como una lista de listas con n&uacute;meros enteros.</p>
+
+<p><strong>Output: </strong>La ruta de la celda vac&iacute;a como una cadena (str).</p>
+
+<div class="for_info_only">
+<p><strong>Example:</strong></p>
+
+<pre class="brush: python">
+checkio([[1, 2, 3],
+         [4, 6, 8],
+         [7, 5, 0]]) == &quot;ULDR&quot;</pre>
+</div>
+
+<p class="for_info_only"><strong>&iquest;C&oacute;mo se usa?: </strong>El uso m&aacute;s obvio para los conceptos en esta misi&oacute;n es la creaci&oacute;n de un robot (bot) que para resolver rompecabezas deslizantes; sin embargo, esta tarea tambi&eacute;n es una forma divertida de aprender algo nuevo, porque este tipo de rompecabezas (n-puzzle) son utilizados tradicionalmente como problemas a resolver por algoritmos de modelado que incluyen heur&iacute;sticos.</p>
+
+<p><strong>Condiciones:</strong><br />
+len(puzzle) == 3<br />
+all(len(row) == 3 for row in puzzle)</p>
+
+<p class="for_info_only"><strong>&iquest;C&oacute;mo utilizar TryIt?: </strong><br />
+<iframe allowfullscreen="" frameborder="0" height="315" src="//www.youtube.com/embed/u-7dtPVrApU" width="560"></iframe></p>
