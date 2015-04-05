@@ -1,0 +1,70 @@
+<p>
+    <img class="for_info_only" style="float: left" title="8-puzzle-pic"
+         src="/media/files/stephenwithenter.png" alt="8-puzzle-pic"
+         width="180px"/>
+
+    '8-puzzle' é um quebra-cabeça deslizante que consiste de uma armação com
+    'peças numeradas dispostas aleatoriamente, com uma peça faltando. O
+    'objetivo do quebra-cabeça é colocar as peças na ordem correta (ver
+    'imagem), deslizando as peças para utilizar o espaço vazio.
+
+    <a href="/mission/outside/?url=http%3A//en.wikipedia.org/wiki/8_puzzle&back_url=/mission/task/info/8-puzzle/">
+        Você pode ler mais sobre esse tipo de quebra-cabeça na Wikipedia
+    </a>
+</p>
+
+<p>
+    Nosso quebra-cabeça consiste de uma matriz 3x3 com números de 1 a 8.
+    Zero é a célula vazia. Você pode "mover" a célula vazia em quatro direções:
+    cima--"U", baixo--"D", esquerda--"L", e direita--"R". Você precisa retornar a
+    sequência de movimentos que resolve o quebra-cabeça. A solução deve ser dada
+    como uma sequência(string) de símbolos ("UDLR") que descreve seus movimentos.
+</p>
+
+<p class="for_info_only" style="text-align: center"><img title="8-puzzle"
+                                                         src="{{ MEDIA }}8-puzzle.png"
+                                                         alt="8-puzzle" width="550px"/></p>
+<p class="for_editor_only" style="text-align: center"><img title="8-puzzle"
+                                                           src="{{ MEDIA }}8-puzzle.png"
+                                                           alt="8-puzzle" width="380px"/></p>
+
+<p>
+    <strong>Entrada: </strong>Uma matrix com números de 1 a 8 inteiros (int), como uma lista de listas.
+</p>
+
+<p>
+    <strong>Saída: </strong>O percurso da célula vazia como uma palavra(string).
+</p>
+
+<div class="for_info_only">
+    <p>
+        <strong>Exemplo:</strong>
+    </p>
+<pre class="brush: python">checkio([[1, 2, 3],
+         [4, 6, 8],
+         [7, 5, 0]]) == "ULDR"</pre>
+</div>
+
+
+<p class="for_info_only">
+    <strong>Como é usado: </strong>
+
+    O uso mais obvio dos conceitos desse problema esta na criação de um robô
+    para resolver esse tipo de quebra-cabeça; entretanto, esse problema é uma
+    maneira divertida de aprender algo novo, já que esse tipo de quebra-cabeça
+    é um problema clássico de modelagem de algoritmos que envolvem
+    heurísticas.
+
+</p>
+
+<p>
+    <strong>Precondition:</strong><br>
+    len(puzzle) == 3<br>
+    all(len(row) == 3 for row in puzzle)
+</p>
+
+<p class="for_info_only">
+    <strong>How to use TryIt: </strong><br>
+    <iframe width="560" height="315" src="//www.youtube.com/embed/u-7dtPVrApU" frameborder="0" allowfullscreen></iframe>
+</p>
+
