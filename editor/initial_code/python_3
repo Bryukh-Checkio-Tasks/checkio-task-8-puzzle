@@ -1,4 +1,6 @@
-def checkio(puzzle):
+from typing import List
+
+def checkio(puzzle: List[List[int]]) -> str:
     """
     Solve the puzzle
       U - up
